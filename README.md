@@ -10,8 +10,8 @@ Automatic evaluate Machine Translation(MT) results based on Google's Universal S
         print('Source: ',sentences1[i])
         print('Target: ',sentences2[i])
         print('Score: ',scores[i])
-   
-### Example result
+Result:
+
     Source:  I love you!      
     Target:  我爱你      
     Score:  0.9733935      
