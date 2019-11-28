@@ -6,7 +6,7 @@ import re
 # Load model from tensorflow hub
 embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/2")
 # Load model from local
-# embed = hub.KerasLayer('../../Sentence_embeddings/Universal_sentence_encoder/model/')
+# embed = hub.KerasLayer('./model/')
 
 def text_preprocess(text,lang):
     if lang=='en':
@@ -28,7 +28,7 @@ def text_preprocess(text,lang):
     else:
         return text
         
- def evaluate(sentences1,sentences2,trans_type):
+def evaluate(sentences1,sentences2,trans_type):
     '''
     Input:
         sentences1 [list]: source sentences in translations.
@@ -50,8 +50,8 @@ def text_preprocess(text,lang):
     return results
 
 if __name__ == "__main__":
-    sentences1 = ["I love you!","I want to eat fried rice tonight.","I am glad to hear that"]
-    sentences2 = ["我爱你","我今晚想吃炸薯条","听到这件事我很难过"]
+    sentences1 = ["I love you!", "Nice to meet you", "I want to eat fried rice tonight.", "I am glad to hear that"]
+    sentences2 = ["我爱你", "很高兴见到你！", "我今晚想吃炸薯条", "听到这件事我很难过"]
     trans_type = "en_zh"
     scores = evaluate(sentences1,sentences2,trans_type)
     for i in range(len(sentences1)):
