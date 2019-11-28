@@ -1,4 +1,4 @@
-# MT_evaluation
+# Machine Translation Evaluation
 Automatic evaluate Machine Translation(MT) results based on Google's Universal Sentence Encoder. Evaluate translation only based on source and target sentences. Reference sentences are not necessary to be provided! 
 
 ## Example usage
