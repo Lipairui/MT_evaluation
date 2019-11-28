@@ -2,6 +2,7 @@
 Automatic evaluate Machine Translation(MT) results based on Google's Universal Sentence Encoder. Evaluate translation only based on source and target sentences. Reference sentences are not necessary to be provided! 
 
 ## Example usage
+    from main import evaluate
     sentences1 = ["I love you!", "Nice to meet you", "I want to eat fried rice tonight.", "I am glad to hear that"]
     sentences2 = ["我爱你", "很高兴见到你！", "我今晚想吃炸薯条", "听到这件事我很难过"]
     trans_type = "en_zh"
